@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+    <title>Grade 10 Sapphire Future Professions</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI';
+        background: linear-gradient(135deg, #0b1d3a, #1c3b6b);
+        color: #f8f9fa;
+        padding-top: 40px;
+    }
+
+    h2 {
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #ffd700;
+        margin-bottom: 30px;
+    }
+
+    .menu-card {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 215, 0, 0.2);
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .menu-card h3 {
+        color: #ffd700;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    label {
+        color: #f1f1f1;
+        font-size: 0.9rem;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+    }
+
+    .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.3);
+    }
+
+    .btn-dark {
+        background: #ffd700;
+        color: #0b1d3a;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        padding: 8px 14px;
+        margin-right: 5px;
+        transition: 0.2s ease;
+    }
+
+    .btn-dark:hover {
+        background: #e6c200;
+        transform: scale(1.03);
+    }
+
+    #classmate-list {
+        color: #f8f9fa;
+        font-size: 0.95rem;
+    }
+
+    #notif {
+        margin-top: 10px;
+        color: #ffd700;
+    }
+</style>
+
+</head>
+<body class="blue-theme">
+    <h2 style="text-align: center;">Grade 10 Sapphire's Future Professions🎓</h2>
+    <div class="container py-3">
+        <div class="row g-4">
+            <div class="col-12 d-flex flex-wrap gap-4">
+                
+                <!-- Menu Card -->
+                <div class="menu-card p-4 flex-fill" style="min-width: 300px; max-height: 500px; overflow-y: auto;">
+                    <h3 class="mb-3" style="color: white;">Classmates</h3>
+                    <p id="classmate-list"></p>
+                </div>
+
+                <!-- Customer Details Card -->
+                <div class="menu-card p-4 flex-fill" style="min-width: 300px;">
+                    <h3 class="mb-3" style="color: white;">Classmate Details</h3>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">📚Classmate Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="section" class="form-label">⭐Section</label>
+                        <input type="text" class="form-control" id="section" placeholder="Enter your section">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Future_profession" class="form-label">🎓Future profession</label>
+                        <input type="text" class="form-control" id="Future_profession" placeholder="Enter your future profession">
+                    </div>
+                    <div>
+                        <button class="btn btn-dark" py-click="addClassmate">Add Classmate</button>
+                        <button class="btn btn-dark" py-click="showlist">Show List</button>
+                    </div>
+                    <div>
+                        <p style="font-size: 13px;" id="notif"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Order Summary ===== -->
+    <div class="container">
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="py" src="main.py"></script>
+</body>
+</html>
